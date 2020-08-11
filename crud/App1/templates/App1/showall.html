@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show All Employees</title>
+</head>
+<body>
+	<div class="container" align="center">
+		<h1>Employee Details</h1>
+		<table border="2">
+			<thead>
+				<tr>
+					<th> Emp ID</th>
+					<th> Emp Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for info in data %}
+					<tr>
+						<td>{{info.empId}}</td>
+						<td>{{info.empName}}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

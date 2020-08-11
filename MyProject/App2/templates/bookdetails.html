@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>library</title>
+
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container" align="center">
+	<form action= "{% url 'library' %}" method='POST' class="form-group">
+		{% csrf_token %}
+		<h1>Enter the Book Details</h1>
+		Book : <input type="text" name="bookName" class="form-control"><br>
+		Department:<input type="text" name="department" class="form-control"><br>
+		Author: <input type="text" name="author" class="form-control"><br>
+		Published Year:<input type="integer" name="year" class="form-control"><br>
+		<button type="submit">Submit</button><br>
+	</form>
+	</div>
+</body>
+</html>

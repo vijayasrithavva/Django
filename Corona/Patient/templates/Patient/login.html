@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+	<script type="text/javascript" src="{% static 'jq/jquery.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
+
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-danger text-center">Login</h1>
+
+		<form class="form-group" action="{% url 'login' %}" method="POST">
+		{% csrf_token %}
+		<!--
+			<input type="email" name="" class="form-control" placeholder="email">
+		-->
+		<input type="text" name="name" class="form-control">
+			<input type="password" name="password" class="form-control" placeholder="enter password">
+			<button class="btn btn-primary">Login</button>
+		</form>
+		
+	</div>
+</body>
+</html>

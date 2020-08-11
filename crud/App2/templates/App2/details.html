@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Details</title>
+</head>
+<body>
+	<table border="2">
+		{% for row in data %}
+			
+				<tr>
+					<td>{{row.id}}</td>
+					<td>{{row.studId}}</td>
+					<td><a href="{% url 'edit' row.id %}">{{row.studName}}</td>
+					<td>{{row.branch}}</td>
+					<td>{{row.age}}</td>
+					<td>delete</td>
+				</tr>
+			
+		{% endfor %}
+	</table>
+</body>
+</html>

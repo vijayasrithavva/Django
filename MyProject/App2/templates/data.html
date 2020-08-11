@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mobiles</title>
+</head>
+<body>
+	<form action= "{% url 'mobiles' %}" method='POST'>
+		{% csrf_token %}
+		model:<input type="text" name="model" >
+		cost:<input type="float" name="cost">
+		year:<input type="integer" name="year">
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>

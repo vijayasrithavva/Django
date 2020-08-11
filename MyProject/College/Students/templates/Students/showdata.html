@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>showdata</title>
+	<style type="text/css">
+		li,#a{
+			color: blue;
+		}
+		#b{
+			color: green;
+			background-color: black;
+			font-size: 200px;
+		}
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="{% static '/css/mystyle.css' %}">
+	<script type="text/javascript" src="{% static '/js/myjs.js/' %}"></script>
+</head>
+<body>
+	<table border="1px">
+  <tr>
+   <th>Name</th>
+   <th>Age</th>
+  </tr>
+  <tr>
+   <td>{{ herodata.name }}</td>
+   <td>{{ herodata.Age }}</td>
+  </tr>
+  
+
+
+  
+ 	<h1 id="s">Vijji</h1>
+ 	<h1 class="d">ishu</h1>
+ 	<h1>prasad</h1>
+
+
+ </table>
+ 
+ 	<ol>
+ 		<li style="color: red;background-color: green;background: black">mahesh</li>
+ 		<li>sunitha</li>
+ 	</ol>
+
+ 	<ul>
+ 		<li id='b'>mahesh</li>
+ 		<li>sunitha</li>
+ 	</ul>
+ 	<h1 id='a'>Hii</h1>
+ 	<p>dfhvhvgf hgugugjh hgghj.;j</p>
+
+ 	<hr>
+
+ 	<br>
+ 	<br>
+ 	<iframe src="https://www.youtube.com/watch?v=fwDRqTYpuUA" height="300px" width="300px"></iframe>
+
+
+ 	<footer>
+ 		this is my folder
+ 	</footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Form</title>
+</head>
+<body>
+	<form action="{% url 'edit' data.id %}" method="POSt">
+		{% csrf_token %}
+		{{form.as_p}}
+		<button type="submit">Update</button>
+	</form>
+</body>
+</html>
+
+<!-- messages generation
+in django messages is a model for generating "alerts
+from django.contrib import messages 
+
+Types of messages :
+1.messages.info
+2.messages.success
+3.messages.warning
+4.messages.error
+5.messages.debug
+
+for example:
+messages.info(request,"your record is added successfully")
+
+To display these messages in html
+The format is 
+{% if messages %}
+	{% for msg in messages %}
+		<h2>{{msg}}</h2>
+	{% endfor %}
+{% endif %}
+-->

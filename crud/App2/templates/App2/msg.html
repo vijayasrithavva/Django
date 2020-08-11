@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Message Page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<form action="{% url 'delete' info.id %}" method="POST">
+		{% csrf_token %}
+		<h2>Are u sure to delete {{info.studName}} record</h2>
+		<input type="submit" name="submit" value="delete" class="btn btn-warning">
+		<a href="{% url 'details' %}" class="btn btn-primary">cancel</a>
+	</form>
+		
+</body>
+</html>

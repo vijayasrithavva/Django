@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::register::</title>
+</head>
+<body>
+	<h1>Hii</h1>
+	<form action="{% url 'register' %}"method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+							
+</body>
+</html>
